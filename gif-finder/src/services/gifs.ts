@@ -6,7 +6,7 @@ export const getGifs = async (search: string): Promise<Data[]> => {
     const response = await axios.get(endPoint.api_key, {
       params: {
         q: search,
-        limit: 40,
+        limit: 45,
       },
     });
 
