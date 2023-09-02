@@ -44,12 +44,13 @@ export default function Home() {
         </form>
       </section>
       <section className="grid place-content-center">
-        <div className="flex flex-wrap items-center justify-center w-screen gap-4 px-4 md:w-auto md:grid md:grid-cols-3 md:place-content-center">
+        <div className="grid w-screen md:grid-cols-6 place-content-center ">
           {dataGifs.map((i) => (
-            <div className="grid place-content-center">
+            <div key={i.id} className="grid w-full place-content-center">
               <img
                 src={i.images.original.url}
                 alt={i.alt_text}
+                loading="lazy"
                 className="border-4 border-transparent hover:border-white rounded-2xl "
                 key={i.id}
               />
